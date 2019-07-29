@@ -19,6 +19,7 @@ class ToughQuestion2 {
                         {
                         case 1 : System.out.println("Enter the number of Slice of bread");
                         	bread = Integer.parseInt(br.readLine());
+                        	calculateCalories(bread);
                         	//call the function which calculate the calories for only bread
                         	System.out.println();
                         	break;
@@ -26,6 +27,7 @@ class ToughQuestion2 {
                         	bread = Integer.parseInt(br.readLine());
                         	System.out.println("Enter the number teaspoon of Jam");
                         	jam = Integer.parseInt(br.readLine());
+                        	calculateCalories(bread, jam);
                         	//call the function which calculate the calories for only bread & jam
                         	System.out.println();
                         	break;
@@ -35,21 +37,47 @@ class ToughQuestion2 {
                         	jam = Integer.parseInt(br.readLine());
                         	System.out.println("Enter the number teaspoon of Butter");
                         	butter = Integer.parseInt(br.readLine());
+                        	calculateCalories(bread, jam, butter);
                         	//call the function which calculate the calories for  bread,jam & butter
                         	System.out.println();
                         	break;
                         }
                         //System.out.printf("%.3f",ca.calculateEnergy());
                         //System.out.println(" kJ of energy generated from "+ca.returnCalories()+" calories");
+                        
             }
+
+			private static void calculateCalories(Integer bread, Integer jam, Integer butter) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private static void calculateCalories(Integer bread, Integer jam) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private static void calculateCalories(Integer bread) {
+				// TODO Auto-generated method stub
+				
+			}
 }
 class Calories {
-            
-            int calculateCalories() {
+	        int total;
+	        int calculateCalories(int i) {
             //you have to overload this function for three parameters refer the question
-            	return -1;
+            	total = i*74;
+            	return total;
             }
-            
-            
+	        int calculateCalories(int i, int j) {
+                //you have to overload this function for three parameters refer the question
+            	total = (i*74) + (j*26);
+            	return total;
+                }
+	        int calculateCalories(int i, int j, int k) {
+                //you have to overload this function for three parameters refer the question
+            	total = (i*74) + (j*26)+ (k*102);
+            	return total;
+                }
             
 }
